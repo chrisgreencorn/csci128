@@ -104,3 +104,198 @@ for (var count2 = 0; count2 < 6; count2++) {
 }
 ```
 ![Stage 14, Puzzle 16](14-16.png)
+
+## Lab 3.2
+
+##### Stage 16, Puzzle 2
+
+Code:
+```
+function get_nectar() {
+  turnRight();
+  moveForward();
+  moveForward();
+  for (var count = 0; count < 3; count++) {
+      getNectar();
+  }
+  moveBackward();
+  moveBackward();
+  turnLeft();
+}
+
+moveForward();
+moveForward();
+get_nectar();
+for (var count2 = 0; count2 < 3; count2++) {
+  moveForward();
+}
+get_nectar();
+moveForward();
+moveForward();
+get_nectar();
+```
+![Stage 15, Puzzle 2](16-2-1.png)
+![Stage 15, Puzzle 2 - Function](16-2-2.png)
+
+##### Stage 16, Puzzle 4
+
+Code:
+```
+var direction;
+var left;
+var right;
+
+function get_3_nectar(direction) {
+  if (direction == left) {
+    turnLeft();
+  } else {
+    turnRight();
+  }
+
+  moveForward();
+  moveForward();
+  for (var count = 0; count < 3; count++) {
+      getNectar();
+  }
+  moveBackward();
+  moveBackward();
+  if (direction == left) {
+    turnRight();
+  } else {
+    turnLeft();
+  }
+
+}
+
+left = 0;
+right = 1;
+
+for (var count2 = 0; count2 < 2; count2++) {
+  moveForward();
+  get_3_nectar(left);
+  moveForward();
+  get_3_nectar(right);
+}
+```
+![Stage 16, Puzzle 4](16-4-1.png)
+![Stage 16, Puzzle 4 Function](16-4-2.png)
+
+##### Stage 16, Puzzle 7
+Code:
+```
+var binary;
+var bit;
+var i;
+
+function draw(binary) {
+  if (!bit) {
+    bit = 0;
+  }
+  var i_end = binary.length;
+  var i_inc = 1;
+  if (1 > i_end) {
+    i_inc = -i_inc;
+  }
+  for (i = 1;
+       i_inc >= 0 ? i <= i_end : i >= i_end;
+       i += i_inc) {
+    if (binary.charAt(i - 1) == 1) {
+      draw_bit();
+    }
+    jumpForward(50);
+    bit = bit + 1;
+    if (bit > 7) {
+      jumpBackward(400);
+      turnRight(90);
+      jumpForward(50);
+      turnLeft(90);
+      bit = 0;
+    }
+  }
+}
+
+function draw_bit() {
+  penColour('#ffffff');
+  penWidth(25);
+  for (var count2 = 0; count2 < 4; count2++) {
+    moveForward(25);
+    turnRight(90);
+  }
+}
+
+for (var count = 0; count < 13; count++) {
+  draw('10110');
+}
+```
+![Stage 16, Puzzle 7](16-7.png)
+
+##### Stage 16, Puzzle 10
+Code:
+```
+var binary;
+var counter;
+var bit;
+var i;
+
+function draw(binary) {
+  if (!bit) {
+    bit = 0;
+  }
+  var i_end = binary.length;
+  var i_inc = 1;
+  if (1 > i_end) {
+    i_inc = -i_inc;
+  }
+  for (i = 1;
+       i_inc >= 0 ? i <= i_end : i >= i_end;
+       i += i_inc) {
+    if (binary.charAt(i - 1) == 1) {
+      draw_bit();
+    }
+    jumpForward(25);
+    bit = bit + 1;
+    if (bit > 15) {
+      jumpBackward(400);
+      turnRight(90);
+      jumpForward(25);
+      turnLeft(90);
+      bit = 0;
+    }
+  }
+}
+
+function draw_bit() {
+  penColour('#ffffff');
+  penWidth(12.5);
+  for (var count7 = 0; count7 < 4; count7++) {
+    moveForward(12.5);
+    turnRight(90);
+  }
+}
+
+for (counter = 1; counter <= 8; counter++) {
+  for (var count = 0; count < counter; count++) {
+    draw('1');
+  }
+  var repeat_end = 16 - counter * 2;
+  for (var count2 = 0; count2 < repeat_end; count2++) {
+    draw('0');
+  }
+  for (var count3 = 0; count3 < counter; count3++) {
+    draw('1');
+  }
+}
+for (counter = 8; counter >= 1; counter--) {
+  for (var count4 = 0; count4 < counter; count4++) {
+    draw('1');
+  }
+  var repeat_end2 = 16 - counter * 2;
+  for (var count5 = 0; count5 < repeat_end2; count5++) {
+    draw('0');
+  }
+  for (var count6 = 0; count6 < counter; count6++) {
+    draw('1');
+  }
+}
+```
+![Stage 16, Puzzle 10] (16-10.png)
