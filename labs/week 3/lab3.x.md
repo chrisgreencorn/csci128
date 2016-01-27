@@ -178,6 +178,7 @@ for (var count2 = 0; count2 < 2; count2++) {
 }
 ```
 ![Stage 16, Puzzle 4](16-4-1.png)
+
 ![Stage 16, Puzzle 4 Function](16-4-2.png)
 
 ##### Stage 16, Puzzle 7
