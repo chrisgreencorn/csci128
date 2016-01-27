@@ -1,0 +1,4 @@
+Will figure out how to do this with python sometime when my brain is not mush.
+
+pandoc -V geometry:margin=1in --from=markdown_github foo.md -o bar.pdf
+

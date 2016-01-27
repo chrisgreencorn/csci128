@@ -6,9 +6,9 @@ CS128 Lab 3
 
 ## Lab 3.1
 
-##### Stage 14, Puzzle 10
+### Stage 14, Puzzle 10
 
-Code:
+##### Code:
 ```
 var length2;
 
@@ -23,9 +23,9 @@ draw_hexagon(100);
 ```
 ![Stage 14, Puzzle 10](14-10.png)
 
-##### Stage 14, Puzzle 11
+### Stage 14, Puzzle 11
 
-Code:
+##### Code:
 ```
 var sides;
 var length2;
@@ -44,9 +44,9 @@ for (var count2 = 0; count2 < 6; count2++) {
 ```
 ![Stage 14, Puzzle 10](14-11.png)
 
-##### Stage 14, Puzzle 15
+### Stage 14, Puzzle 15
 
-Code:
+##### Code:
 ```
 var length2;
 var sides;
@@ -74,9 +74,9 @@ for (counter = 2; counter <= 100; counter += 2) {
 ```
 ![Stage 14, Puzzle 15](14-15.png)
 
-##### Stage 14, Puzzle 16
+### Stage 14, Puzzle 16
 
-Code:
+##### Code:
 ```
 var length2;
 var sides;
@@ -107,9 +107,9 @@ for (var count2 = 0; count2 < 6; count2++) {
 
 ## Lab 3.2
 
-##### Stage 16, Puzzle 2
+### Stage 16, Puzzle 2
 
-Code:
+##### Code:
 ```
 function get_nectar() {
   turnRight();
@@ -137,9 +137,8 @@ get_nectar();
 ![Stage 15, Puzzle 2](16-2-1.png)
 ![Stage 15, Puzzle 2 - Function](16-2-2.png)
 
-##### Stage 16, Puzzle 4
-
-Code:
+### Stage 16, Puzzle 4
+##### Code:
 ```
 var direction;
 var left;
@@ -181,8 +180,11 @@ for (var count2 = 0; count2 < 2; count2++) {
 
 ![Stage 16, Puzzle 4 Function](16-4-2.png)
 
-##### Stage 16, Puzzle 7
-Code:
+## Lab 3.3
+
+### Stage 16, Puzzle 7
+
+##### Code:
 ```
 var binary;
 var bit;
@@ -230,8 +232,8 @@ for (var count = 0; count < 13; count++) {
 ```
 ![Stage 16, Puzzle 7](16-7.png)
 
-##### Stage 16, Puzzle 10
-Code:
+### Stage 16, Puzzle 10
+##### Code:
 ```
 var binary;
 var counter;
@@ -300,3 +302,17 @@ for (counter = 8; counter >= 1; counter--) {
 }
 ```
 ![Stage 16, Puzzle 10](16-10.png)
+
+## Lab 3.4
+
+Define a function in python to sum the numbers in a range of two numbers: start and end.
+
+```
+def sum_of_range(start,end):
+  sum = 0
+  count = 0
+  for num in range(start,end+1):
+      sum = sum+num
+      count = count+1
+  return sum
+```
