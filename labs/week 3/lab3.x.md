@@ -298,4 +298,4 @@ for (counter = 8; counter >= 1; counter--) {
   }
 }
 ```
-![Stage 16, Puzzle 10] (16-10.png)
+![Stage 16, Puzzle 10](16-10.png)
