@@ -16,11 +16,10 @@ def hotel_cost(nights):
 ## Edmonton = 222
 ## Vancouver = 475
 
-# Cost of return airfare for cities
+# Cost of airfare for cities
 
 def plane_ride_cost(city):
-  # Return price for city
-  if city == Toronto:
+    if city == Toronto:
     return 183
   elif city == Ottawa:
     return 220
@@ -30,8 +29,8 @@ def plane_ride_cost(city):
     return 475
   else:
    print 'You can fly to Toronto, Ottawa, Edmonton, or Vancouver'
-  plane_ride_cost = city
-  return total_flights_return
+  total_flight_cost = city
+  return total_flight_cost
 
 # Cost of rental car, with $50 discount after 7 days and $20 discount between
 
