@@ -45,6 +45,8 @@ def rental_car_cost(days):
   else:
    return base_car_rental
 
+# Total trip cost
+
 def trip_cost(city,days):
   total_trip_cost = hotel_cost(days) + plane_ride_cost(city) + rental_car_cost(days)
   return total_trip_cost
