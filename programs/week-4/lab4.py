@@ -1,3 +1,5 @@
+# Lab 4.1
+
 def hotel_cost(nights):
  total_hotel_cost = 140 * nights
  return total_hotel_cost
@@ -31,7 +33,7 @@ def rental_car_cost(days):
   elif days >= 7:
    return week_plus_discount
   else:
-   return total_car_rental
+   return base_car_rental
     
 def trip_cost(city,days):
   total_trip_cost = hotel_cost(days) + plane_ride_cost(city) + rental_car_cost(days)
