@@ -1,0 +1,12 @@
+def decreaseBlue(picture):
+  for p in getPixels(picture):
+    value = getBlue(p)
+    setBlue(p,value*0.25)
+
+show(picture)
+
+#def clearBlue(picture):
+#  for p in getPixels(picture):
+#    setBlue(p,0)
+#  
+#  show(picture)
