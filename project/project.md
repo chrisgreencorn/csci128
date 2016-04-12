@@ -69,7 +69,10 @@ def makeSunset(canvas):
       
 def makeSettingSun(canvas,frame):
   addOvalFilled(canvas,342-(frame*10),62-(frame*2),20,20,yellow)
-  # trajectory: yellow circle (sun) starts in upper right  - increase in *frame* variable accelerates approach to zero on both x and y axes giving the illusion of the sun's path in the sky 
+  # trajectory: yellow circle (sun) starts in upper right  - increase in frame 
+  # variable accelerates approach to zero on both x and y axes giving the illusion
+  # of the sun's path in the sky 
+
 def sunsetOnBeach():
   canvas = beachPic
   # Sun setting
