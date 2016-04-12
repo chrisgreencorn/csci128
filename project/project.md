@@ -68,7 +68,7 @@ def makeSunset(canvas):
     setGreen(p,value*0.9)
       
 def makeSettingSun(canvas,frame):
-  addOvalFilled(canvas,342-(frame*10),62-(frame*2),20,20,yellow)
+  addOvalFilled(canvas,342-(frame*5),62+(frame*5),20,20,yellow)
   # trajectory: yellow circle (sun) starts in upper right  - increase in frame 
   # variable accelerates approach to zero on both x and y axes giving the illusion
   # of the sun's path in the sky 
