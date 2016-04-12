@@ -35,7 +35,7 @@ def twoObjectMovie(directory):
     # object one: diag. right, top to bottom
     addOvalFilled(canvas,(n+400)+10,n*10,50,35,green)   
     # object two: left to right
-    addRectFilled(canvas,n+13,400,60,10,makeColor(233,54,107))
+    addRectFilled(canvas,n,400,60,10,makeColor(233,54,107))
     nString = str(n)
     if n < 10:
       writePictureTo(canvas, directory+'/frame0'+nString+'.jpeg')
@@ -68,12 +68,12 @@ def makeSunset(canvas):
     setGreen(p,value*0.9)
       
 def makeSettingSun(canvas,frame):
-  addOvalFilled(canvas,342-(frame*2),62-(frame*2),20,20,yellow)
-
+  addOvalFilled(canvas,342-(frame*10),62-(frame*2),20,20,yellow)
+  # trajectory: yellow circle (sun) starts in upper right  - increase in *frame* variable accelerates approach to zero on both x and y axes giving the illusion of the sun's path in the sky 
 def sunsetOnBeach():
   canvas = beachPic
   # Sun setting
-  for frame in range(1,64):
+  for frame in range(1,):
     makeSettingSun(beachPic,frame)
     makeSunset(beachPic)
     print frame
